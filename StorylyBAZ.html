@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script custom-element="storyly-web" src="https://web-story.storyly.io/sdk/3.6.16/storyly-web.js"></script> 
+		<style>
+			h1 {
+				text-align: center;
+			}
+		</style>
+		<title></title>
+	</head>
+	<body>
+		<h1>Android</h1>
+		<storyly-web></storyly-web>
+		<script>
+			const storylyWeb = document.querySelector('storyly-web');
+			storylyWeb.init({    
+				token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NfaWQiOjgxNTcsImFwcF9pZCI6MjA1OTQsImluc19pZCI6MjMxNTd9.M7Yz2ol_RZ6T7xLFnhhlqGmJ70ghHWdkIE-Nghf2NeI',
+				props: { 
+					storyGroupSize: "200x300", // e.g. 50x50
+					storyGroupBorderRadius: "1"
+				}
+			});
+		</script>
+		<h1>iOS</h1>
+		<storyly-web id="otherInstance"></storyly-web>
+		<script>
+			otherInstance.init({
+				token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NfaWQiOjgxNTcsImFwcF9pZCI6MjA1OTMsImluc19pZCI6MjMxNTh9.1hOqYXbe3kmq8gJv9A8Ul2WWFKMw8IOp1HdMIL75Nfo',
+				props: { 
+					storyGroupSize: "200x300", // e.g. 50x50
+					storyGroupBorderRadius: "1"
+				}
+			});
+		</script>
+	</body>
+</html>
